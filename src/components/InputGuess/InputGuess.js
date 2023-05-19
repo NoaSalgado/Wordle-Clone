@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { NUM_OF_GUESSES_ALLOWED } from '../../constants';
 
-function InputGuess({ addGuess }) {
+function InputGuess({ addGuess, incrementNumGuesses, numGuesses }) {
   const [guess, setGuess] = useState('');
 
   function handleChange(e) {
@@ -10,6 +11,7 @@ function InputGuess({ addGuess }) {
   function handleSubmit(e) {
     e.preventDefault();
     addGuess(guess);
+    incrementNumGuesses();
     setGuess('');
   }
 
@@ -21,6 +23,7 @@ function InputGuess({ addGuess }) {
         id='guess-input'
         pattern='[a-zA-Z]{5}'
         title='5 letter word'
+        disabled={numGuesses === NUM_OF_GUESSES_ALLOWED}
         value={guess}
         onChange={handleChange}
       />

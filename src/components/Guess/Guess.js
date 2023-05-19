@@ -2,8 +2,9 @@ import React from 'react';
 import { range } from '../../utils';
 import { checkGuess } from '../../game-helpers';
 
-function Guess({ value, answer }) {
+function Guess({ value, answer, checkIfUserWins }) {
   const checkedLetters = checkGuess(value, answer);
+
   return (
     <p className='guess'>
       {range(5).map((number) => (
