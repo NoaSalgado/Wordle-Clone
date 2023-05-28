@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import GuessesList from '../GuessesList/GuessesList';
 import InputGuess from '../InputGuess/InputGuess';
+import Keyboard from '../Keyboard/Keyboard';
 import Banner from '../Banner/Banner';
 
 import { sample } from '../../utils';
@@ -41,6 +42,7 @@ function Game() {
         incrementNumGuesses={incrementNumGuesses}
         numGuesses={numGuesses}
       />
+      <Keyboard guessesList={guessesList} answer={answer} />
 
       {gameStatus !== 'running' && (
         <Banner status={gameStatus} numGuesses={numGuesses} answer={answer} />

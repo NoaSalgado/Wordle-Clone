@@ -2,7 +2,7 @@ import React from 'react';
 import { range } from '../../utils';
 import { checkGuess } from '../../game-helpers';
 
-function Guess({ value, answer, checkIfUserWins }) {
+function Guess({ value, answer }) {
   const checkedLetters = checkGuess(value, answer);
 
   return (
