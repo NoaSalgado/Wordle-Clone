@@ -219,6 +219,14 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+.btn {
+  background-color: var(--color-gray-300);
+  border-radius: 0.5rem;
+  color: var(--color-gray-900);
+  padding: 1rem 2rem;
+  align-self: center;
+}
+
 .keyboard {
   display: flex;
   flex-direction: column;
