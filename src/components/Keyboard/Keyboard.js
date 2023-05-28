@@ -25,10 +25,6 @@ function Keyboard({ guessesList, answer }) {
       {letters.map((row, index) => (
         <div className='row' key={index}>
           {row.map((letter, index) => {
-            console.log(
-              statusByLetter[letter.toUpperCase()],
-              letter.toUpperCase()
-            );
             return (
               <div
                 key={index}
